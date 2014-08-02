@@ -1,0 +1,20 @@
+body {
+	background: url( ../images/main-bg.png );
+	background-attachment: fixed;
+}
+
+.main_wrap {
+	background-color: #fff;
+	width: 1024px;
+	margin: 0px auto;
+	padding: 10px;
+	border: 1px solid #c7becf;
+	box-shadow: 5px 5px 10px #f0f0f0;
+	height: 2000px;
+}
+
+.logo {
+	width: 300px;
+	height: 97px;
+	background: url( ../images/logo.png );
+}

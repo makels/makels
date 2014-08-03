@@ -8,6 +8,10 @@ class App {
 
 	public $smarty = null;
 
+	public $debug = false;
+
+	public $modules = array();
+
 	public function __construct() {
 		$this->smarty = new Smarty();
 		$this->smarty->template_dir = SMARTY_TEMPLATES;
@@ -19,9 +23,27 @@ class App {
 
 	// Run application
 	public function run() {
-		// TODO: Execute all modules
+		$this->initDebugger();
+		$this->initModules();
 		$this->initEnvironment();
 		$this->smarty->display(SMARTY_TEMPLATES."/index.tpl");
+	}
+
+	// Debugger init
+	public function initDebugger() {
+		require_once(CONFIGS."/debug.php");
+	}
+
+	// Modules initialization
+	public function initModules() {
+		$paths = scandir(ABS.MODULES, 1);
+		foreach ($paths as $path) {
+			if($path && !empty($path) && $path != "." && $path != "..") {
+					$mod_cfg = ABS.MODULES."/".$path."/module.xml";
+					if(file_exists($mod_cfg))
+						$this->loadModule($path, $mod_cfg);			
+			}
+		}
 	}
 
 	// Environment initialization
@@ -34,6 +56,36 @@ class App {
 		);
 
 		$this->smarty->assign("smarty_var", $smarty_vars);
+	}
+
+	// Get module by name
+	public function getModule($name) {
+		foreach ($this->modules as $module) {
+			if($module->name == $name) return $module;
+		}
+		return null;
+	}
+
+	/* PRIVATE */
+	private function loadModule($path, $xml_file) {
+
+		$xml = file_get_contents($xml_file);
+		$parser = xml_parser_create();
+		xml_parse_into_struct($parser, $xml, $vals, $index);
+		xml_parser_free($parser);
+	
+		foreach ($vals as $key => $value) {
+			if($value["tag"] == "NAME" && $value["type"] == "complete" && isset($value["value"])) $m_name = $value["value"];
+			if($value["tag"] == "DESCRIPTION" && $value["type"] == "complete" && isset($value["value"])) $m_descr = $value["value"];
+			// TODO: Add modules config params
+
+		}
+		$mod_file = ABS.MODULES.sprintf("/%s/%s.module.php", $path, $m_name);
+		if(file_exists($mod_file)) require_once($mod_file);
+		$module = new $m_name;
+		$module->name = $m_name;
+		$module->init();
+		$this->modules[] = $module;
 	}
 
 }

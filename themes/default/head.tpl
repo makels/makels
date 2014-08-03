@@ -1,4 +1,4 @@
-<title>Makels v.1.0</title>
+<title>{"main_title"|label}</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
 <!-- STYLES -->

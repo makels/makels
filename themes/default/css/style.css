@@ -9,7 +9,6 @@ body {
 	background-color: #fff;
 	width: 1024px;
 	margin: 0px auto;
-	padding: 10px;
 	border: 1px solid #c7becf;
 	box-shadow: 5px 5px 10px #f0f0f0;
 	height: 2000px;
@@ -24,7 +23,14 @@ body {
 	height: 97px;
 	background: url( ../images/logo.png );
 	float: left;
+	opacity: .7;
+	cursor: pointer;
 }
+
+.logo:hover {
+	opacity: 1;
+}
+
 
 /* CONTACTS */
 .contacts {
@@ -50,6 +56,10 @@ body {
 	opacity: .4;
 	margin-left: 10px;
 	margin-top: 10px;
+}
+
+.mod_Lang .l_flag:hover {
+	opacity: 1;
 }
 
 .mod_Lang .l_flag.selected {

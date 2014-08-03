@@ -5,7 +5,9 @@
 */
 class ZMK extends Module {
 
-	public $menu;
+	public function main() {
+
+	}
 
 }
 

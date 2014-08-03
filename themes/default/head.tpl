@@ -6,4 +6,4 @@
 <link rel="stylesheet" type="text/css" href="{$smarty_var['style_url']}/style.css">
 
 <!-- SCRIPTS -->
-<!--script type="text/javascript" src="{$smarty_var['script_url']}/"></script-->
+<script type="text/javascript" src="{$smarty_var['script_url']}/jquery-1.10.2.js"></script>

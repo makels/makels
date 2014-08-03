@@ -10,6 +10,8 @@ class App {
 
 	public $debug = false;
 
+	public $db = null;
+
 	public $modules = array();
 
 	public function __construct() {
@@ -26,12 +28,18 @@ class App {
 		$this->initDebugger();
 		$this->initModules();
 		$this->initEnvironment();
+		$this->initDatabase();
 		$this->smarty->display(SMARTY_TEMPLATES."/index.tpl");
 	}
 
 	// Debugger init
 	public function initDebugger() {
 		require_once(CONFIGS."/debug.php");
+	}
+
+	// Database init
+	public function initDatabase() {
+		$this->db = new DB();
 	}
 
 	// Modules initialization

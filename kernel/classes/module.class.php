@@ -27,7 +27,7 @@ class Module {
 	public $index;
 
 	// Module smarty_vars
-	public $smarty_vars;
+	public $smarty_vars = array();
 
 	// Module initialization
 	public function init() {
@@ -36,6 +36,7 @@ class Module {
 		$this->classes = $this->root."/classes";
 		$this->index = $this->templates."/index.tpl";
 		$this->initClasses();
+		$this->main();
 	}
 
 	// Module classes initialize
@@ -57,6 +58,17 @@ class Module {
 			$app->smarty->display($this->index);
 		}
 	}
+
+	// Main exec
+	public function main() {
+		// Implement into child modules
+	}
+
+	public function assign($var, $value) {
+		global $app;
+		$app->smarty->assign($var, $value);
+	}
+
 
 }
 

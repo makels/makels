@@ -1,6 +1,8 @@
 body {
 	background: url( ../images/main-bg.png );
 	background-attachment: fixed;
+	font-family: Arial;
+	font-size: 12px;
 }
 
 .main_wrap {
@@ -13,8 +15,63 @@ body {
 	height: 2000px;
 }
 
+.header {
+	display: inline-block;
+}
+
 .logo {
 	width: 300px;
 	height: 97px;
 	background: url( ../images/logo.png );
+	float: left;
 }
+
+/* CONTACTS */
+.contacts {
+	width: 560px;
+	height: 97px;
+	float: left;
+}
+
+/* LANGUAGES */
+.mod_Lang {
+	float: left;
+	width: 150px;
+	height: 97px;
+	display: inline-block;
+	text-align: right;
+}
+
+.mod_Lang .l_flag {
+	float: left;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	opacity: .4;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.mod_Lang .l_flag.selected {
+	opacity: 1;
+}
+
+.mod_Lang .l_flag_us {
+	background: url( ../images/flags/United-States.png );
+	background-size: 40px;
+}
+
+.mod_Lang .l_flag_ua {
+	background: url( ../images/flags/Ukraine.png );
+	background-size: 40px;
+}
+
+.mod_Lang .l_flag_ru {
+	background: url( ../images/flags/Russia.png );
+	background-size: 40px;
+}
+
+.mod_Lang span {
+	color: #8C69AA;
+}
+

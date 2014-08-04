@@ -56,7 +56,7 @@ class Module {
 
 	// Module classes initialize
 	public function initClasses() {
-		if ($handle = opendir($this->classes)) {
+		if ($handle = opendir(ABS.$this->classes)) {
 	    while (false !== ($file = readdir($handle))) { 
 	    		if($file && !empty($file) && $file != "." && $file != "..")
 	        	require_once(ABS.$this->classes."/".$file);

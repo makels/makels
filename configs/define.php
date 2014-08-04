@@ -4,7 +4,6 @@
 */
 
 	// Define paths
-	define("ABS", $_SERVER["DOCUMENT_ROOT"]);
 	define("KERNEL", "/kernel");
 	define("SMARTY", KERNEL."/smarty");
 	define("TEMP", "/temp");

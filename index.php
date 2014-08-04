@@ -1,6 +1,7 @@
 <?php /* Index project file */
 session_start();
-require_once("/configs/config.php");
+define("ABS", $_SERVER["DOCUMENT_ROOT"]);
+require_once(ABS."/configs/config.php");
 
 error_reporting(E_ALL);
 ini_set('display_errors', true);

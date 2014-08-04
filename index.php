@@ -6,8 +6,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', true);
 ini_set('error_reporting',  E_ALL);
 
-$app = new App();
-$app->debug = true;
-$app->run();
+// $app = new App();
+// $app->debug = true;
+// $app->run();
 
 ?>

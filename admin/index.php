@@ -1,3 +1,3 @@
 <?php
-echo("Admin");
+echo("Admin place");
 ?>

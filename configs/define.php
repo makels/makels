@@ -16,8 +16,8 @@
 
 	// Smarty
 	define("SMARTY_TEMPLATES", ABS.THEME);
-	define("SMARTY_COMPILES", TEMP);
-	define("SMARTY_CONFIGS", CONFIGS);
-	define("SMARTY_CACHE", CACHE);
+	define("SMARTY_COMPILES", ABS.TEMP);
+	define("SMARTY_CONFIGS", ABS.CONFIGS);
+	define("SMARTY_CACHE", ABS.CACHE);
 
 ?>

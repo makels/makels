@@ -34,7 +34,7 @@ class App {
 
 	// Debugger init
 	public function initDebugger() {
-		require_once(CONFIGS."/debug.php");
+		require_once(ABS.CONFIGS."/debug.php");
 	}
 
 	// Database init

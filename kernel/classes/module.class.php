@@ -59,7 +59,7 @@ class Module {
 		if ($handle = opendir($this->classes)) {
 	    while (false !== ($file = readdir($handle))) { 
 	    		if($file && !empty($file) && $file != "." && $file != "..")
-	        	require_once(ABS.$this->classes."/".$file);
+	        	require_once($this->classes."/".$file);
 	    }
     	closedir($handle); 
 		}

@@ -1,21 +1,35 @@
 body {
-	background: url( ../images/main-bg.png );
+	/*background: url( ../images/main-bg.png );*/
 	background-attachment: fixed;
 	font-family: Arial;
 	font-size: 12px;
+	color: #4f4a86;
+}
+
+h2 {
+	font-size: 30px;
 }
 
 .main_wrap {
 	background-color: #fff;
 	width: 1024px;
 	margin: 0px auto;
-	border: 1px solid #c7becf;
+	/*border: 1px solid #c7becf;*/
 	box-shadow: 5px 5px 10px #f0f0f0;
-	height: 2000px;
+	height: 850px;
 }
 
 .header {
 	display: inline-block;
+	width: 100%;
+	background-color: #4f4a86;
+}
+
+.header-title {
+	font-size: 20px;
+	line-height: 40px;
+	color: #fff;
+	margin-left: 10px;
 }
 
 .logo {
@@ -41,17 +55,17 @@ body {
 
 /* LANGUAGES */
 .mod_Lang {
-	float: left;
-	width: 150px;
-	height: 97px;
+	float: right;
+	width: 100%;
+	height: 55px;
 	display: inline-block;
 	text-align: right;
 }
 
 .mod_Lang .l_flag {
-	float: left;
-	width: 40px;
-	height: 40px;
+	float: right;
+	width: 30px;
+	height: 30px;
 	cursor: pointer;
 	opacity: .4;
 	margin-left: 10px;
@@ -68,20 +82,112 @@ body {
 
 .mod_Lang .l_flag_us {
 	background: url( ../images/flags/United-States.png );
-	background-size: 40px;
+	background-repeat: no-repeat;
+	background-size: 30px;
 }
 
 .mod_Lang .l_flag_ua {
 	background: url( ../images/flags/Ukraine.png );
-	background-size: 40px;
+	background-size: 30px;
+	background-repeat: no-repeat;
 }
 
 .mod_Lang .l_flag_ru {
 	background: url( ../images/flags/Russia.png );
-	background-size: 40px;
+	background-size: 30px;
+	background-repeat: no-repeat;
 }
 
 .mod_Lang span {
-	color: #8C69AA;
+	color: #4f4a86;
 }
 
+/* PHOTO UPLOADER */
+.mpu_title, .mcm_title {
+	text-align: center;
+	border-bottom: 2px solid #4f4a86;
+}
+
+.social-btns {
+	margin: 10px auto;
+	width: 375px;
+	height: 250px;
+}
+
+.social-btn {
+	width: 114px;
+	height: 114px;
+	margin: 5px;
+	float: left;
+	background-size: 114px !important;
+}
+
+.file {
+	background: url( ../images/social/file.png );
+}
+
+.camera {
+	background: url( ../images/social/camera.png );
+}
+
+.makels {
+	background: url( ../images/social/makels.png );
+}
+
+.facebook {
+	background: url( ../images/social/facebook.png );
+}
+
+.vk {
+	background: url( ../images/social/vk.png );
+}
+
+.ok {
+	background: url( ../images/social/ok.png );
+}
+
+.models {
+	margin: 10px auto;
+	width: 100%;
+}
+
+.model {
+	width: 100px;
+	height: 140px;
+	margin: 5px;
+	float: left;
+	background-size: 100px 140px !important;
+	border: 1px solid #afafaf;
+}
+
+.model-1 {
+	background: url( ../images/models/thumbs/1.jpg );
+}
+
+.model-2 {
+	background: url( ../images/models/thumbs/2.jpg );
+}
+
+.model-3 {
+	background: url( ../images/models/thumbs/3.jpg );
+}
+
+.model-4 {
+	background: url( ../images/models/thumbs/4.jpg );
+}
+
+.model-5 {
+	background: url( ../images/models/thumbs/5.jpg );
+}
+
+.model-6 {
+	background: url( ../images/models/thumbs/6.jpg );
+}
+
+.model-7 {
+	background: url( ../images/models/thumbs/7.jpg );
+}
+
+.model-8 {
+	background: url( ../images/models/thumbs/8.jpg );
+}

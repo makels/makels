@@ -3,10 +3,8 @@
 
 <!-- ZMK client styles -->
 <link rel="stylesheet" type="text/css" href="{$mod_tmpl_url}/css/style.css">
-<link rel="stylesheet" type="text/css" href="{$mod_tmpl_url}/css/jflow.style.css">
 
 <!-- ZMK client modules -->
-<script type="text/javascript" src="{$mod_tmpl_url}/js/Components/jflow.plus.min.js"></script>
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Components/main_menu.js"></script>
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Core/app.js"></script>
 

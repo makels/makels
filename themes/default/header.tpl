@@ -1,8 +1,7 @@
 <div class="header">
-	<!-- Logo -->
-	<div class="logo"></div>
+	<!--div class="logo"></div>
 	<div class="contacts">
-		<!-- Add contacts module -->
-	</div>
-	{module name="Lang"}
+	</div-->
+	{*module name="Lang"*}
+	<span class="header-title">{"main_title"|label}</span>
 </div>

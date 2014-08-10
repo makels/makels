@@ -8,7 +8,7 @@
 .zmk_menu {
 	width: 100%;
 	height: 40px;
-	margin-top: 15px;
+	margin-top: 3px;
 }
 
 .zmk_menu ul {
@@ -18,7 +18,7 @@
 .zmk_menu ul li {
 	float: left;
 	line-height: 40px;
-	background-color: #C4A8DD;
+	background-color: #4f4a86;
 	width: 142px;
 	text-align: center;
 	cursor: pointer;
@@ -33,11 +33,11 @@
 }
 
 .zmk_menu ul li:hover {
-	background-color: #834EB3;
+	background-color: #2DA532;
 }
 
 .zmk_menu ul li.active {
-	background-color: #834EB3;
+	background-color: #2DA532;
 }
 
 /* Mode panel*/
@@ -45,7 +45,7 @@
 	/*margin-top: 5px;*/
 	/*padding: 10px;*/
 	height: 700px;
-	background-color: #fff8ff;
+	/*background-color: #fff8ff;*/
 }
 
 .zmode_content {
@@ -55,6 +55,17 @@
 .zmode_title span {
 	font-size: 26px;
 	color: #707070;
+}
+
+.left-side {
+	float: left;
+	width: 540px;
+}
+
+.right-side {
+	float: right;
+	padding: 10px;
+	width: 460px;
 }
 
 /* Slider */

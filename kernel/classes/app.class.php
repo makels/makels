@@ -6,6 +6,8 @@
 
 class App {
 
+	public $lang;
+
 	public $smarty = null;
 
 	public $debug = false;
@@ -25,10 +27,11 @@ class App {
 
 	// Run application
 	public function run() {
+		$this->lang = isset($_SESSION["lang"]) ? $_SESSION["lang"] : 'ru';
 		$this->initDebugger();
+		$this->initDatabase();
 		$this->initModules();
 		$this->initEnvironment();
-		$this->initDatabase();
 		$this->smarty->display(SMARTY_TEMPLATES."/index.tpl");
 	}
 
@@ -45,12 +48,12 @@ class App {
 	// Modules initialization
 	public function initModules() {
 		$paths = scandir(ABS.MODULES, 1);
-		foreach ($paths as $path) {
-			if($path && !empty($path) && $path != "." && $path != "..") {
-					$mod_cfg = ABS.MODULES."/".$path."/module.xml";
+		$sql = sprintf("SELECT * FROM `#modules` WHERE `enable` = 1 ORDER BY priority");
+		$res = $this->db->query($sql);
+		foreach ($res as $module) {
+				$mod_cfg = ABS.MODULES."/".$module['name']."/module.xml";
 					if(file_exists($mod_cfg))
-						$this->loadModule($path, $mod_cfg);			
-			}
+						$this->loadModule($module['name'], $mod_cfg);			
 		}
 	}
 

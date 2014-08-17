@@ -2,7 +2,6 @@
 /*
 	Define variables module
 */
-
 	// Define paths
 	define("KERNEL", "/kernel");
 	define("SMARTY", KERNEL."/smarty");

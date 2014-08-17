@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} \.(css|jpg|gif|png|zip|rar|doc|xls|js|tif|tiff|docx|xlsx|ico)$
+RewriteRule ^(.*)$ $1 [L,QSA]
+
+RewriteRule ^(.*)$ index.php

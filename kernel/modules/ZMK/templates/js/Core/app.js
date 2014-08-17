@@ -4,6 +4,8 @@ var App = function() {
 
 	this.mainMenu = new MainMenu();
 
+	this.Makels = null;
+
 	this.init= function() {
 
 		// Main menu init
@@ -14,6 +16,14 @@ var App = function() {
 
 		// Set startup mode (main)
 		this.setMode(this.mode);
+
+		// Create MAKELS Module
+		this.Makels = new MAKELS({
+			selector: '#zmk_workpace_wrapper',
+			// other config items
+		});
+
+		this.Makels.render();
 
 	}
 

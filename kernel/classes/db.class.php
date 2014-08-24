@@ -9,7 +9,7 @@ class DB {
 	// Connection
 	public $connection;
 
-	// Connect to database
+	// Connect to database mysqli
 	function __construct() {
 		
 		$this->connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS);

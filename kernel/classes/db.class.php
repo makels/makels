@@ -12,9 +12,9 @@ class DB {
 	// Connect to database
 	function __construct() {
 		
-		$this->connection = mysql_connect(DB_HOST, DB_USER, DB_PASS);
-		mysql_select_db(DB_NAME, $this->connection);
-		mysql_set_charset(DB_CHARSET);
+		$this->connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS);
+		mysqli_select_db(DB_NAME, $this->connection);
+		mysqli_set_charset(DB_CHARSET);
 
 	}
 
@@ -24,9 +24,9 @@ class DB {
 		$sql = str_replace("#", DB_PREFIX."_" , $sql);
 		if($debug) echo($sql);
 
-		$res = mysql_query($sql);
+		$res = mysqli_query($sql);
 		$rows = array();
-		while ($row = mysql_fetch_assoc($res)) {
+		while ($row = mysqli_fetch_assoc($res)) {
 			$rows[] = $row;
 		}
 		
@@ -38,7 +38,7 @@ class DB {
 		$sql = str_replace("#", DB_PREFIX."_" , $sql);
 		if($debug) echo($sql);
 		mysqli_execute($sql);
-		$id = mysql_insert_id();
+		$id = mysqli_insert_id();
 		return $id;
 	}
 

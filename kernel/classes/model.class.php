@@ -24,6 +24,8 @@ class Model {
 		// TODO: Преобразовать в jpg из uploads и положить в TEMP
 	}
 
+	/* PRIVATE */
+	
 }
 
 ?>

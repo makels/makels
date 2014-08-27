@@ -10,22 +10,23 @@ class Api {
 
 	public function execute($cmd) {
 
-		$cmd = new ApiCommands();
+		$commands = new ApiCommands();
 
 		switch ($cmd) {
+
 			// Test command
 			case 'test':
-				$this->result = $cmd->test();
+				$this->result = $commands->test();
 				break;
 			
 			// Set model
 			case 'set_model':
-				$this->result = $cmd->setModel();
+				$this->result = $commands->setModel();
 				break;
 
 			// Set model from template
 			case 'set_model_template':
-				$this->result = $cmd->setModelTemplate();
+				$this->result = $commands->setModelTemplate();
 				break;
 
 			default:

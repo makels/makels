@@ -42,7 +42,7 @@
 
 /* Mode panel*/
 .zmk_modes {
-	/*margin-top: 5px;*/
+	margin-top: 25px;
 	/*padding: 10px;*/
 	height: 700px;
 	/*background-color: #fff8ff;*/
@@ -75,10 +75,22 @@
 	right: 5px;
 }
 
-#zmk_workpace_wrapper {
+#zmk_workplace_wrapper {
 	position: absolute;
-	top: 44px;
+	top: 64px;
 	width: 540px;
 	height: 720px;
 	box-shadow: 1px 5px 15px 5px;
+}
+
+.empty_model_container {
+	margin: 50% auto;
+	width: 50%;
+	text-align: center;
+	font-size: 30px;
+	color: #c0c0c0;
+	border: 5px dashed #c0c0c0;
+	padding: 30px;
+	border-radius: 20px;
+	cursor: pointer;
 }

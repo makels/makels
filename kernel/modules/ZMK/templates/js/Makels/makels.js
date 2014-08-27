@@ -8,6 +8,11 @@ var MAKELS = function(config) {
 	// Main selector for wrapper element
 	this.selector = (config && config.selector) ? config.selector : "body";
 
+	// Model loaded
+	this.model = new Model({
+		wrapper: this.selector
+	});
+
 	// Main mask
 	this.mask = new MakelsMask({
 		masked: this.selector
@@ -15,8 +20,15 @@ var MAKELS = function(config) {
 
 	// Initialization module
 	this.init = function() {
+		// Init Mask
+		this.mask.init();
 
-		this.mask.show();
+		// Init Model
+		this.model.init();
+
+		// Render Makels
+		this.render();
+
 	}
 
 	// Render all module
@@ -24,5 +36,4 @@ var MAKELS = function(config) {
 
 	}
 
-	this.init();
 }

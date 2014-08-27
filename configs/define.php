@@ -12,6 +12,8 @@
 	define("THEME", THEMES."/default");
 	define("CLASSES", KERNEL."/classes");
 	define("MODULES", KERNEL."/modules");
+	define("UPLOADS_URL", "/uploads");
+	define("UPLOADS_DIR", ABS.UPLOADS_URL);
 
 	// Smarty
 	define("SMARTY_TEMPLATES", ABS.THEME);

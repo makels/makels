@@ -15,6 +15,20 @@ class ApiCommands {
 		return array('message' => "Api worked !!! ".$req_test);
 	}
 
+	/*
+		Description: Upload command
+		Request: /api/upload
+	*/
+	public function upload() {
+		if(isset($_FILES['userfile']) && isset($_FILES['userfile']['tmp_name'])) {
+			$basefile = basename($_FILES['userfile']['name']);
+			$uploadfile = UPLOADS_DIR . $basefile;
+			if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
+    		return array('url' => UPLOADS_URL . $basefile);
+			} else return array( 'err' => ERR_FILE );
+		} else return array( 'err' => ERR_FILE );
+	}
+
 	/* 
 		Description: Set current model
 		Request: /api/set_model?file=my_img.png

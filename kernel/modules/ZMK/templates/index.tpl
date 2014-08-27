@@ -6,11 +6,14 @@
 
 <!-- ZMK client modules -->
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Components/main_menu.js"></script>
+
 <!-- Makels APP-->
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Makels/extensions.js"></script>
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Makels/makels_mask.js"></script>
+<script type="text/javascript" src="{$mod_tmpl_url}/js/Makels/makels_model.js"></script>
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Makels/makels.js"></script>
 
+<script type="text/javascript" src="{$mod_tmpl_url}/js/Core/api.js"></script>
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Core/app.js"></script>
 
 <div class="mod_ZMK">
@@ -27,7 +30,7 @@
 	{include file="$mod_tmpl_dir/hair.tpl"}
 	{include file="$mod_tmpl_dir/nails.tpl"}
 
-	<div id="zmk_workpace_wrapper"></div>
+	<div id="zmk_workplace_wrapper"></div>
 
 </div>
 
@@ -35,6 +38,7 @@
 <script type="text/javascript">
 
 	$(function() {
+		app.lang = $.parseJSON("{/literal}{$lang_labels}{literal}");
 		app.init();
 	});
 

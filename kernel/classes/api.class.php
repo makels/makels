@@ -19,6 +19,10 @@ class Api {
 				$this->result = $commands->test();
 				break;
 			
+			case 'upload':
+				$this->result = $commands->upload();
+				break;
+
 			// Set model
 			case 'set_model':
 				$this->result = $commands->setModel();

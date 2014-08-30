@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-08-10 20:20:20
+<?php /* Smarty version Smarty-3.1.16, created on 2014-08-30 19:50:03
          compiled from "D:\ORDERS\MAKELS\makels.com\kernel\modules\PhotoUploader\templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2243153e78d1be54838-85772529%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6bb9260c94cd693d5f5f1285a245e876c18cba69' => 
     array (
       0 => 'D:\\ORDERS\\MAKELS\\makels.com\\kernel\\modules\\PhotoUploader\\templates\\index.tpl',
-      1 => 1407690564,
+      1 => 1409417400,
       2 => 'file',
     ),
   ),
@@ -26,9 +26,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </h2>
 	</div>
 	<div class="social-btns">
-		<a href="#" title='<?php echo smarty_modifier_label("photo_upload_camera");?>
+		<a onclick="app.mainMenu.choiseMode('zmm_photo'); app.Makels.model.loadModelWebCam();" href="javascript: void(0);" title='<?php echo smarty_modifier_label("photo_upload_camera");?>
 '><div class="social-btn camera">&nbsp;</div></a>
-		<a href="#" title='<?php echo smarty_modifier_label("photo_upload_file");?>
+		<a onclick="app.mainMenu.choiseMode('zmm_photo'); app.Makels.model.loadModel();" href="javascript: void(0);" title='<?php echo smarty_modifier_label("photo_upload_file");?>
 '><div class="social-btn file">&nbsp;</div></a>
 		<a href="#" title='<?php echo smarty_modifier_label("photo_upload_makels");?>
 '><div class="social-btn makels">&nbsp;</div></a>

@@ -6,15 +6,20 @@
 
 <!-- ZMK client modules -->
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Components/main_menu.js"></script>
+<script type="text/javascript" src="{$mod_tmpl_url}/js/Components/file_uploader.js"></script>
+<script type="text/javascript" src="{$mod_tmpl_url}/js/Components/photobooth.js"></script>
+
 
 <!-- Makels APP-->
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Makels/extensions.js"></script>
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Makels/makels_mask.js"></script>
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Makels/makels_model.js"></script>
+<script type="text/javascript" src="{$mod_tmpl_url}/js/Makels/model_manager.js"></script>
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Makels/makels.js"></script>
 
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Core/api.js"></script>
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Core/app.js"></script>
+
 
 <div class="mod_ZMK">
 	
@@ -39,6 +44,7 @@
 
 	$(function() {
 		app.lang = $.parseJSON("{/literal}{$lang_labels}{literal}");
+		app.tmpl_url = "{/literal}{$mod_vars.templates_url}{literal}";
 		app.init();
 	});
 

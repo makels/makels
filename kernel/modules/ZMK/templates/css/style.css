@@ -78,9 +78,11 @@
 #zmk_workplace_wrapper {
 	position: absolute;
 	top: 64px;
-	width: 540px;
-	height: 720px;
+	width: 520px;
+	height: 700px;
 	box-shadow: 1px 5px 15px 5px;
+	border: 10px solid #fff;
+	overflow: hidden;
 }
 
 .empty_model_container {
@@ -93,4 +95,69 @@
 	padding: 30px;
 	border-radius: 20px;
 	cursor: pointer;
+}
+
+/* LOADING MASK */
+#makels_loading_mask_wrapper {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	height: 720px;
+	top: 0px;
+	left: 0px;
+}
+
+#makels_loading_mask {
+	width: 100%;
+	position: absolute;
+	height: 720px;
+	top: 0px;
+	left: 0px;
+	background-color: #ffffff;
+	opacity: 0.7;
+}
+
+#makels_loading_mask_wrapper img {
+	z-index: 999;
+	position: absolute;
+	margin-left: -32px;
+	margin-top: 50%;
+}
+
+#makels_loading_mask_wrapper span {
+	z-index: 999;
+	font-size: 30px;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	margin-top: 65%;
+	top: 0px;
+	left: 0px;
+}
+
+/* WEB Cam*/
+.photobooth {
+	width: 520px !important;
+	height: 700px !important;
+}
+
+.photobooth canvas {
+	width: 1000px !important;
+	height: 720px !important;	
+}
+
+/* MODEL MANAGER */
+#model_manager_wrapper {
+	position: absolute;
+	bottom: 20px;
+	width: 70%;
+	height: 50px;
+	background-color: #fff;
+	margin: 0 10%;
+	opacity: .5;
+	border-radius: 20px;
+	line-height: 50px;
+	border: 1px solid #c0c0c0;
+	box-shadow: 1px 1px 15px 5px #c0c0c0;
+	padding: 0 20px;
 }

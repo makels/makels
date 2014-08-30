@@ -20,11 +20,12 @@ var MAKELS = function(config) {
 
 	// Initialization module
 	this.init = function() {
-		// Init Mask
-		this.mask.init();
 
 		// Init Model
 		this.model.init();
+
+		// Init Mask
+		this.mask.init();
 
 		// Render Makels
 		this.render();

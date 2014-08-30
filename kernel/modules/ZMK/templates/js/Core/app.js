@@ -12,6 +12,9 @@ var App = function() {
 	// Language
 	this.lang = null;
 
+	// Url templates
+	this.tmpl_url = "";
+
 	// Client API
 	this.api = new Api();
 
@@ -21,6 +24,14 @@ var App = function() {
 		// Main menu init
 		this.mainMenu.init();
 		
+		this.Makels = new MAKELS({
+			selector: '#zmk_workplace_wrapper',
+			// other config items
+		});
+
+		// Init makel component
+		this.Makels.init();
+
 		// Set startup mode (main)
 		this.setMode(this.mode);
 
@@ -30,14 +41,11 @@ var App = function() {
 	this.setMode = function(mode) {
 		this.mode = mode;
 
-		if(!this.Makels && this.mode != "main") {
-			// Create MAKELS Module
-			this.Makels = new MAKELS({
-				selector: '#zmk_workplace_wrapper',
-				// other config items
-			});
-			this.Makels.init();
-		}
+		if(this.mode == "main")
+			$("#zmk_workplace_wrapper").hide();
+		else
+			$("#zmk_workplace_wrapper").show();
+
 
 		$(".zmk_modes").hide();
 		$("#zmk_mode_" + mode).show();

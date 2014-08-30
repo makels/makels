@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-08-27 20:35:12
+<?php /* Smarty version Smarty-3.1.16, created on 2014-08-30 20:06:59
          compiled from "D:\ORDERS\MAKELS\makels.com\kernel\modules\ZMK\templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2366453e23adb08fb51-19494146%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '46cdd09ae8773439c34d84f9dacb83cc3f9c262c' => 
     array (
       0 => 'D:\\ORDERS\\MAKELS\\makels.com\\kernel\\modules\\ZMK\\templates\\index.tpl',
-      1 => 1409160884,
+      1 => 1409418399,
       2 => 'file',
     ),
   ),
@@ -35,6 +35,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <!-- ZMK client modules -->
 <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['mod_tmpl_url']->value;?>
 /js/Components/main_menu.js"></script>
+<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['mod_tmpl_url']->value;?>
+/js/Components/file_uploader.js"></script>
+<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['mod_tmpl_url']->value;?>
+/js/Components/photobooth.js"></script>
+
 
 <!-- Makels APP-->
 <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['mod_tmpl_url']->value;?>
@@ -44,12 +49,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['mod_tmpl_url']->value;?>
 /js/Makels/makels_model.js"></script>
 <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['mod_tmpl_url']->value;?>
+/js/Makels/model_manager.js"></script>
+<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['mod_tmpl_url']->value;?>
 /js/Makels/makels.js"></script>
 
 <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['mod_tmpl_url']->value;?>
 /js/Core/api.js"></script>
 <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['mod_tmpl_url']->value;?>
 /js/Core/app.js"></script>
+
 
 <div class="mod_ZMK">
 	
@@ -84,6 +92,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	$(function() {
 		app.lang = $.parseJSON("<?php echo $_smarty_tpl->tpl_vars['lang_labels']->value;?>
 ");
+		app.tmpl_url = "<?php echo $_smarty_tpl->tpl_vars['mod_vars']->value['templates_url'];?>
+";
 		app.init();
 	});
 

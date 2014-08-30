@@ -33,6 +33,16 @@ class Api {
 				$this->result = $commands->setModelTemplate();
 				break;
 
+			// Set model from webcam
+			case 'set_model_webcam':
+				$this->result = $commands->setModelWebCam();
+				break;
+
+			// Analize model
+			case 'analize_model':
+				$this->result = $commands->analizeModel();
+				break;
+
 			default:
 				$this->result = array('err' => ERR_COMMAND );
 				break;

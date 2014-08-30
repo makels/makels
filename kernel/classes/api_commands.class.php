@@ -20,11 +20,11 @@ class ApiCommands {
 		Request: /api/upload
 	*/
 	public function upload() {
-		if(isset($_FILES['userfile']) && isset($_FILES['userfile']['tmp_name'])) {
-			$basefile = basename($_FILES['userfile']['name']);
-			$uploadfile = UPLOADS_DIR . $basefile;
-			if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
-    		return array('url' => UPLOADS_URL . $basefile);
+		if(count($_FILES) > 0 && isset($_FILES[0]) && isset($_FILES[0]['tmp_name']) && in_array($_FILES[0]['type'], array("image/jpeg", "image/png", "image/gif"))) {
+			$basefile = basename($_FILES[0]['name']);
+			$uploadfile = UPLOADS_DIR . "/".session_id(). "_" . $basefile;
+			if (move_uploaded_file($_FILES[0]['tmp_name'], $uploadfile)) {
+    		return array('url' => UPLOADS_URL . "/" .session_id(). "_" . $basefile, 'file' => session_id(). "_" . $basefile);
 			} else return array( 'err' => ERR_FILE );
 		} else return array( 'err' => ERR_FILE );
 	}
@@ -35,7 +35,7 @@ class ApiCommands {
 	*/
 	public function setModel() {
 		global $req_file;
-		if(empty($req_file) || !file_exists(TEMP.$req_file))
+		if(empty($req_file) || !file_exists(UPLOADS_DIR . "/" . $req_file))
 			return array( 'err' => ERR_FILE );
 		
 		$model = new Model();
@@ -48,13 +48,34 @@ class ApiCommands {
 		Request: /api/set_model_template?id=1
 	*/
 	public function setModelTemplate() {
-		global $req_id;
-		if(empty($req_id) || !file_exists(TEMP.$req_file))
-			return array( 'err' => ERR_FILE );
-		
+		global $req_file;
 		$model = new Model();
-		$model->createFromTmpl($req_id); 
-		$this->result = get_object_vars($model);
+		$model->createFromTmpl($req_file); 
+		return get_object_vars($model);
+	}
+
+	/* 
+		Description: Set current model from webcam
+		Request: /api/set_model_webcam
+	*/
+	public function setModelWebCam() {
+		global $req_dataUrl;
+		$model = new Model();
+		$model->createFromWebCam($req_dataUrl); 
+		return get_object_vars($model);
+	}
+
+	/* 
+		Description: Analize model
+		Request: /api/analize_model
+	*/
+	public function analizeModel() {
+		global $req_file;
+		$result = array(
+			"face_count" => face_count(MODELS_DIR."/".$req_file, CASCADE_PATH.'/haarcascade_frontalface_alt.xml'),
+			"face_detect" => face_detect(MODELS_DIR."/".$req_file, CASCADE_PATH.'haarcascade_frontalface_alt.xml')
+			);
+		return $result;
 	}
 
 }

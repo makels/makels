@@ -49,10 +49,10 @@ var ModelManager = function(config) {
 		var rnd = Math.ceil(Math.random(5)*10000);
 		var rect_id = "rect_" + rnd;
 		$(this.model.wrapper).append("<div id='" + rect_id + "' class='model_rect'></div>");
-		$("#".rect_id).css('top', coords.y + "px");
-		$("#".rect_id).css('left', coords.x + 'px');
-		$("#".rect_id).css('width', coords.w + 'px');
-		$("#".rect_id).css('height', coords.h + 'px');
+		$("#" + rect_id).css('top', coords.y + "px");
+		$("#" + rect_id).css('left', coords.x + 'px');
+		$("#" + rect_id).css('width', coords.w + 'px');
+		$("#" + rect_id).css('height', coords.h + 'px');
 	}
 
 	this.setPoint = function(x, y) {

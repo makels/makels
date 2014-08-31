@@ -137,7 +137,7 @@ var Model = function(config) {
 		$("#load_model_cnt").remove();
 		$("#model_img_id").remove();
 		var rnd = Math.ceil(Math.random(5)*10000);
-		$(this.wrapper).append("<img width='540' id='model_img_id' src='" + this.model_data.url + "?cache=" + rnd + "' />");
+		$(this.wrapper).append("<div id='model_img_id'><img src='" + this.model_data.url + "?cache=" + rnd + "' /></div>");
 		this.managerCmp = new ModelManager({
 			model: this
 		});

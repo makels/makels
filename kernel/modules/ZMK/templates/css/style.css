@@ -161,3 +161,8 @@
 	box-shadow: 1px 1px 15px 5px #c0c0c0;
 	padding: 0 20px;
 }
+
+.model_rect {
+	position: absolute;
+	border: 3px solid;
+}

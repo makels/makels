@@ -6,7 +6,7 @@
 var Api = function() {
 
 	// Api url
-	this.url_prefix = "/api/";
+	this.url_prefix = "http://makels.com/api/";
 
 	// Request
 	this.upload = function(data, success) {

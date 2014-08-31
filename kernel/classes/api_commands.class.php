@@ -73,7 +73,7 @@ class ApiCommands {
 		global $req_file;
 		$result = array(
 			"face_count" => face_count(MODELS_DIR."/".$req_file, CASCADE_PATH.'/haarcascade_frontalface_alt.xml'),
-			"face_detect" => face_detect(MODELS_DIR."/".$req_file, CASCADE_PATH.'haarcascade_frontalface_alt.xml')
+			"face_detect" => face_detect(MODELS_DIR."/".$req_file, CASCADE_PATH.'/haarcascade_frontalface_alt.xml')
 			);
 		return $result;
 	}

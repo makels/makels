@@ -1,4 +1,5 @@
 <title>{"main_title"|label}</title>
+<link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
 <!-- STYLES -->

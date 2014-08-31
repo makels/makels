@@ -10,6 +10,7 @@ var ModelManager = function(config) {
 
 	// Render manager
 	this.render = function() {
+		$('#model_manager_wrapper').remove();
 		$(this.model.wrapper).append("<div id='model_manager_wrapper'><button id='btn_test_id'>TEST</button></div>");
 		this.initHandlers();
 	}

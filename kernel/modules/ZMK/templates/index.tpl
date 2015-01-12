@@ -5,18 +5,23 @@
 <link rel="stylesheet" type="text/css" href="{$mod_tmpl_url}/css/style.css">
 
 <!-- ZMK client modules -->
+<!-- Makels Components -->
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Components/main_menu.js"></script>
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Components/file_uploader.js"></script>
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Components/photobooth.js"></script>
+<script type="text/javascript" src="{$mod_tmpl_url}/js/Components/photo_utils.js"></script>
 
+<!-- Makels Model -->
 
-<!-- Makels APP-->
-<script type="text/javascript" src="{$mod_tmpl_url}/js/Makels/extensions.js"></script>
-<script type="text/javascript" src="{$mod_tmpl_url}/js/Makels/makels_mask.js"></script>
-<script type="text/javascript" src="{$mod_tmpl_url}/js/Makels/makels_model.js"></script>
-<script type="text/javascript" src="{$mod_tmpl_url}/js/Makels/model_manager.js"></script>
+<script type="text/javascript" src="{$mod_tmpl_url}/js/Model/mask.js"></script>
+<script type="text/javascript" src="{$mod_tmpl_url}/js/Model/manager.js"></script>
+<script type="text/javascript" src="{$mod_tmpl_url}/js/Model/model.js"></script>
+
+<!-- Makels application -->
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Makels/makels.js"></script>
 
+<!-- Makels Core -->
+<script type="text/javascript" src="{$mod_tmpl_url}/js/Core/extensions.js"></script>
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Core/api.js"></script>
 <script type="text/javascript" src="{$mod_tmpl_url}/js/Core/app.js"></script>
 

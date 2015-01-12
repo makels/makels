@@ -9,9 +9,7 @@ var MAKELS = function(config) {
 	this.selector = (config && config.selector) ? config.selector : "body";
 
 	// Model loaded
-	this.model = new Model({
-		wrapper: this.selector
-	});
+	this.model = null;
 
 	// Main mask
 	this.mask = new MakelsMask({
@@ -20,9 +18,6 @@ var MAKELS = function(config) {
 
 	// Initialization module
 	this.init = function() {
-
-		// Init Model
-		this.model.init();
 
 		// Init Mask
 		this.mask.init();
